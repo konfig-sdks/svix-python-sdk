@@ -1,0 +1,48 @@
+# do not import all endpoints into this module because that uses a lot of memory and stack frames
+# if you need the ability to import all endpoints from this module, import them with
+# from svix_python_sdk.apis.path_to_api import path_to_api
+
+import enum
+
+
+class PathValues(str, enum.Enum):
+    API_V1_AUTH_APPPORTALACCESS_APP_ID = "/api/v1/auth/app-portal-access/{app_id}"
+    API_V1_AUTH_DASHBOARDACCESS_APP_ID = "/api/v1/auth/dashboard-access/{app_id}"
+    API_V1_AUTH_LOGOUT = "/api/v1/auth/logout"
+    API_V1_AUTH_APP_APP_ID_EXPIREALL = "/api/v1/auth/app/{app_id}/expire-all"
+    API_V1_APP = "/api/v1/app"
+    API_V1_APP_APP_ID = "/api/v1/app/{app_id}"
+    API_V1_APP_APP_ID_ENDPOINT = "/api/v1/app/{app_id}/endpoint"
+    API_V1_APP_APP_ID_ENDPOINT_ENDPOINT_ID = "/api/v1/app/{app_id}/endpoint/{endpoint_id}"
+    API_V1_APP_APP_ID_ENDPOINT_ENDPOINT_ID_SECRET = "/api/v1/app/{app_id}/endpoint/{endpoint_id}/secret"
+    API_V1_APP_APP_ID_ENDPOINT_ENDPOINT_ID_SECRET_ROTATE = "/api/v1/app/{app_id}/endpoint/{endpoint_id}/secret/rotate"
+    API_V1_APP_APP_ID_ENDPOINT_ENDPOINT_ID_STATS = "/api/v1/app/{app_id}/endpoint/{endpoint_id}/stats"
+    API_V1_APP_APP_ID_ENDPOINT_ENDPOINT_ID_RECOVER = "/api/v1/app/{app_id}/endpoint/{endpoint_id}/recover"
+    API_V1_APP_APP_ID_ENDPOINT_ENDPOINT_ID_REPLAYMISSING = "/api/v1/app/{app_id}/endpoint/{endpoint_id}/replay-missing"
+    API_V1_APP_APP_ID_ENDPOINT_ENDPOINT_ID_HEADERS = "/api/v1/app/{app_id}/endpoint/{endpoint_id}/headers"
+    API_V1_APP_APP_ID_ENDPOINT_ENDPOINT_ID_TRANSFORMATION = "/api/v1/app/{app_id}/endpoint/{endpoint_id}/transformation"
+    API_V1_APP_APP_ID_ENDPOINT_ENDPOINT_ID_SENDEXAMPLE = "/api/v1/app/{app_id}/endpoint/{endpoint_id}/send-example"
+    API_V1_EVENTTYPE = "/api/v1/event-type"
+    API_V1_EVENTTYPE_IMPORT_OPENAPI = "/api/v1/event-type/import/openapi"
+    API_V1_EVENTTYPE_EVENT_TYPE_NAME = "/api/v1/event-type/{event_type_name}"
+    API_V1_BACKGROUNDTASK = "/api/v1/background-task"
+    API_V1_BACKGROUNDTASK_TASK_ID = "/api/v1/background-task/{task_id}"
+    API_V1_APP_APP_ID_MSG = "/api/v1/app/{app_id}/msg"
+    API_V1_APP_APP_ID_MSG_MSG_ID = "/api/v1/app/{app_id}/msg/{msg_id}"
+    API_V1_APP_APP_ID_MSG_MSG_ID_CONTENT = "/api/v1/app/{app_id}/msg/{msg_id}/content"
+    API_V1_APP_APP_ID_ATTEMPT_ENDPOINT_ENDPOINT_ID = "/api/v1/app/{app_id}/attempt/endpoint/{endpoint_id}"
+    API_V1_APP_APP_ID_ATTEMPT_MSG_MSG_ID = "/api/v1/app/{app_id}/attempt/msg/{msg_id}"
+    API_V1_APP_APP_ID_ENDPOINT_ENDPOINT_ID_MSG = "/api/v1/app/{app_id}/endpoint/{endpoint_id}/msg"
+    API_V1_APP_APP_ID_MSG_MSG_ID_ENDPOINT = "/api/v1/app/{app_id}/msg/{msg_id}/endpoint"
+    API_V1_APP_APP_ID_MSG_MSG_ID_ENDPOINT_ENDPOINT_ID_ATTEMPT = "/api/v1/app/{app_id}/msg/{msg_id}/endpoint/{endpoint_id}/attempt"
+    API_V1_APP_APP_ID_MSG_MSG_ID_ATTEMPT = "/api/v1/app/{app_id}/msg/{msg_id}/attempt"
+    API_V1_APP_APP_ID_MSG_MSG_ID_ATTEMPT_ATTEMPT_ID = "/api/v1/app/{app_id}/msg/{msg_id}/attempt/{attempt_id}"
+    API_V1_APP_APP_ID_MSG_MSG_ID_ATTEMPT_ATTEMPT_ID_CONTENT = "/api/v1/app/{app_id}/msg/{msg_id}/attempt/{attempt_id}/content"
+    API_V1_APP_APP_ID_MSG_MSG_ID_ENDPOINT_ENDPOINT_ID_RESEND = "/api/v1/app/{app_id}/msg/{msg_id}/endpoint/{endpoint_id}/resend"
+    API_V1_STATS_USAGE_APP = "/api/v1/stats/usage/app"
+    API_V1_STATS_USAGE_EVENTTYPES = "/api/v1/stats/usage/event-types"
+    API_V1_APP_APP_ID_INTEGRATION = "/api/v1/app/{app_id}/integration"
+    API_V1_APP_APP_ID_INTEGRATION_INTEG_ID = "/api/v1/app/{app_id}/integration/{integ_id}"
+    API_V1_APP_APP_ID_INTEGRATION_INTEG_ID_KEY = "/api/v1/app/{app_id}/integration/{integ_id}/key"
+    API_V1_APP_APP_ID_INTEGRATION_INTEG_ID_KEY_ROTATE = "/api/v1/app/{app_id}/integration/{integ_id}/key/rotate"
+    API_V1_HEALTH = "/api/v1/health"
