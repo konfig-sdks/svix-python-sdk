@@ -68,60 +68,60 @@ This API features Cross-Origin Resource Sharing (CORS) implemented in compliance
   * [`svix.application.list_all`](#svixapplicationlist_all)
   * [`svix.application.partially_update`](#svixapplicationpartially_update)
   * [`svix.application.remove_app`](#svixapplicationremove_app)
-  * [`svix.application.update_app`](#svixapplicationupdate_app)
-  * [`svix.authentication.expire_app_tokens`](#svixauthenticationexpire_app_tokens)
-  * [`svix.authentication.generate_magic_link`](#svixauthenticationgenerate_magic_link)
-  * [`svix.authentication.obtain_magic_link_and_code`](#svixauthenticationobtain_magic_link_and_code)
-  * [`svix.authentication.revoke_token`](#svixauthenticationrevoke_token)
-  * [`svix.background_tasks.get_task_by_id`](#svixbackground_tasksget_task_by_id)
-  * [`svix.background_tasks.list_recent_tasks`](#svixbackground_taskslist_recent_tasks)
-  * [`svix.endpoint.create_new`](#svixendpointcreate_new)
-  * [`svix.endpoint.get_endpoint`](#svixendpointget_endpoint)
+  * [`svix.application.update_application_by_id`](#svixapplicationupdate_application_by_id)
+  * [`svix.authentication.expire_all_tokens`](#svixauthenticationexpire_all_tokens)
+  * [`svix.authentication.generate_magic_links`](#svixauthenticationgenerate_magic_links)
+  * [`svix.authentication.get_magic_links`](#svixauthenticationget_magic_links)
+  * [`svix.authentication.logout_token`](#svixauthenticationlogout_token)
+  * [`svix.background_tasks.get_by_id`](#svixbackground_tasksget_by_id)
+  * [`svix.background_tasks.get_past_tasks`](#svixbackground_tasksget_past_tasks)
+  * [`svix.endpoint.create_or_update`](#svixendpointcreate_or_update)
+  * [`svix.endpoint.get_details`](#svixendpointget_details)
   * [`svix.endpoint.get_headers`](#svixendpointget_headers)
-  * [`svix.endpoint.get_secret`](#svixendpointget_secret)
-  * [`svix.endpoint.get_stats`](#svixendpointget_stats)
+  * [`svix.endpoint.get_signing_secret`](#svixendpointget_signing_secret)
+  * [`svix.endpoint.get_statistics`](#svixendpointget_statistics)
   * [`svix.endpoint.get_transformation_code`](#svixendpointget_transformation_code)
   * [`svix.endpoint.list_endpoints`](#svixendpointlist_endpoints)
   * [`svix.endpoint.partially_set_headers`](#svixendpointpartially_set_headers)
   * [`svix.endpoint.partially_update`](#svixendpointpartially_update)
   * [`svix.endpoint.remove`](#svixendpointremove)
   * [`svix.endpoint.replay_missing_webhooks`](#svixendpointreplay_missing_webhooks)
-  * [`svix.endpoint.resend_failed_webhooks`](#svixendpointresend_failed_webhooks)
+  * [`svix.endpoint.resend_failed_messages`](#svixendpointresend_failed_messages)
   * [`svix.endpoint.rotate_secret`](#svixendpointrotate_secret)
-  * [`svix.endpoint.send_example_message`](#svixendpointsend_example_message)
+  * [`svix.endpoint.send_example_message_type`](#svixendpointsend_example_message_type)
   * [`svix.endpoint.set_transformation_code`](#svixendpointset_transformation_code)
-  * [`svix.endpoint.update_endpoint`](#svixendpointupdate_endpoint)
-  * [`svix.endpoint.update_headers`](#svixendpointupdate_headers)
-  * [`svix.event_type.archive_type`](#svixevent_typearchive_type)
+  * [`svix.endpoint.set_webhook_headers`](#svixendpointset_webhook_headers)
+  * [`svix.endpoint.update_endpoint_by_id`](#svixendpointupdate_endpoint_by_id)
+  * [`svix.event_type.archive`](#svixevent_typearchive)
   * [`svix.event_type.create_or_update`](#svixevent_typecreate_or_update)
-  * [`svix.event_type.get_by_name`](#svixevent_typeget_by_name)
-  * [`svix.event_type.get_list`](#svixevent_typeget_list)
+  * [`svix.event_type.get_event_type`](#svixevent_typeget_event_type)
   * [`svix.event_type.import_from_openapi`](#svixevent_typeimport_from_openapi)
-  * [`svix.event_type.partially_update_type`](#svixevent_typepartially_update_type)
-  * [`svix.event_type.update_type`](#svixevent_typeupdate_type)
-  * [`svix.health.check_server_status`](#svixhealthcheck_server_status)
+  * [`svix.event_type.list`](#svixevent_typelist)
+  * [`svix.event_type.partially_update_event_type`](#svixevent_typepartially_update_event_type)
+  * [`svix.event_type.update_event_type_name`](#svixevent_typeupdate_event_type_name)
+  * [`svix.health.check_status`](#svixhealthcheck_status)
   * [`svix.integration.create_new_integration`](#svixintegrationcreate_new_integration)
   * [`svix.integration.delete_by_id`](#svixintegrationdelete_by_id)
   * [`svix.integration.get_by_id`](#svixintegrationget_by_id)
   * [`svix.integration.get_key`](#svixintegrationget_key)
-  * [`svix.integration.list_integrations`](#svixintegrationlist_integrations)
-  * [`svix.integration.rotate_integration_key`](#svixintegrationrotate_integration_key)
-  * [`svix.integration.update_integration`](#svixintegrationupdate_integration)
-  * [`svix.message.create_new`](#svixmessagecreate_new)
+  * [`svix.integration.list`](#svixintegrationlist)
+  * [`svix.integration.rotate_key`](#svixintegrationrotate_key)
+  * [`svix.integration.update_integration_by_id`](#svixintegrationupdate_integration_by_id)
+  * [`svix.message.create_new_msg`](#svixmessagecreate_new_msg)
   * [`svix.message.delete_payload`](#svixmessagedelete_payload)
   * [`svix.message.get_by_id_or_event_id`](#svixmessageget_by_id_or_event_id)
   * [`svix.message.list_all_messages`](#svixmessagelist_all_messages)
   * [`svix.message_attempt.delete_response_body`](#svixmessage_attemptdelete_response_body)
-  * [`svix.message_attempt.get_by_destination`](#svixmessage_attemptget_by_destination)
+  * [`svix.message_attempt.get_by_attempt`](#svixmessage_attemptget_by_attempt)
   * [`svix.message_attempt.list_attempted_destinations`](#svixmessage_attemptlist_attempted_destinations)
   * [`svix.message_attempt.list_attempted_messages`](#svixmessage_attemptlist_attempted_messages)
   * [`svix.message_attempt.list_by_endpoint`](#svixmessage_attemptlist_by_endpoint)
   * [`svix.message_attempt.list_by_endpoint_deprecated`](#svixmessage_attemptlist_by_endpoint_deprecated)
-  * [`svix.message_attempt.list_by_msg_attempted_destinations`](#svixmessage_attemptlist_by_msg_attempted_destinations)
-  * [`svix.message_attempt.list_by_msg_attempted_destinations_0`](#svixmessage_attemptlist_by_msg_attempted_destinations_0)
-  * [`svix.message_attempt.resend_message_to_endpoint`](#svixmessage_attemptresend_message_to_endpoint)
-  * [`svix.statistics.calculate_event_types_for_all_apps`](#svixstatisticscalculate_event_types_for_all_apps)
-  * [`svix.statistics.calculate_message_destinations`](#svixstatisticscalculate_message_destinations)
+  * [`svix.message_attempt.list_by_msg`](#svixmessage_attemptlist_by_msg)
+  * [`svix.message_attempt.list_by_msg_attempt`](#svixmessage_attemptlist_by_msg_attempt)
+  * [`svix.message_attempt.resend_webhook`](#svixmessage_attemptresend_webhook)
+  * [`svix.statistics.calculate_event_types_for_apps`](#svixstatisticscalculate_event_types_for_apps)
+  * [`svix.statistics.calculate_message_destinations_for_apps`](#svixstatisticscalculate_message_destinations_for_apps)
 
 <!-- tocstop -->
 
@@ -509,14 +509,14 @@ The app's ID or UID
 
 ---
 
-### `svix.application.update_app`<a id="svixapplicationupdate_app"></a>
+### `svix.application.update_application_by_id`<a id="svixapplicationupdate_application_by_id"></a>
 
 Update an application.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-update_app_response = svix.application.update_app(
+update_application_by_id_response = svix.application.update_application_by_id(
     name="My first application",
     app_id="unique-app-identifier",
     rate_limit=1,
@@ -558,14 +558,14 @@ Optional unique identifier for the application
 
 ---
 
-### `svix.authentication.expire_app_tokens`<a id="svixauthenticationexpire_app_tokens"></a>
+### `svix.authentication.expire_all_tokens`<a id="svixauthenticationexpire_all_tokens"></a>
 
 Expire all of the tokens associated with a specific Application
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-svix.authentication.expire_app_tokens(
+svix.authentication.expire_all_tokens(
     app_id="unique-app-identifier",
     expiry=60,
     idempotency_key="string_example",
@@ -597,51 +597,14 @@ The request's idempotency key
 
 ---
 
-### `svix.authentication.generate_magic_link`<a id="svixauthenticationgenerate_magic_link"></a>
-
-DEPRECATED: Please use `app-portal-access` instead.
+### `svix.authentication.generate_magic_links`<a id="svixauthenticationgenerate_magic_links"></a>
 
 Use this function to get magic links (and authentication codes) for connecting your users to the Consumer Application Portal.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-generate_magic_link_response = svix.authentication.generate_magic_link(
-    app_id="unique-app-identifier",
-    idempotency_key="string_example",
-)
-```
-
-#### ⚙️ Parameters<a id="⚙️-parameters"></a>
-
-##### app_id: `str`<a id="app_id-str"></a>
-
-The app's ID or UID
-
-##### idempotency_key: `str`<a id="idempotency_key-str"></a>
-
-The request's idempotency key
-
-#### 🔄 Return<a id="🔄-return"></a>
-
-[`DashboardAccessOut`](./svix_python_sdk/pydantic/dashboard_access_out.py)
-
-#### 🌐 Endpoint<a id="🌐-endpoint"></a>
-
-`/api/v1/auth/dashboard-access/{app_id}` `post`
-
-[🔙 **Back to Table of Contents**](#table-of-contents)
-
----
-
-### `svix.authentication.obtain_magic_link_and_code`<a id="svixauthenticationobtain_magic_link_and_code"></a>
-
-Use this function to get magic links (and authentication codes) for connecting your users to the Consumer Application Portal.
-
-#### 🛠️ Usage<a id="🛠️-usage"></a>
-
-```python
-obtain_magic_link_and_code_response = svix.authentication.obtain_magic_link_and_code(
+generate_magic_links_response = svix.authentication.generate_magic_links(
     app_id="unique-app-identifier",
     feature_flags=[],
     expiry=604800,
@@ -680,7 +643,44 @@ The request's idempotency key
 
 ---
 
-### `svix.authentication.revoke_token`<a id="svixauthenticationrevoke_token"></a>
+### `svix.authentication.get_magic_links`<a id="svixauthenticationget_magic_links"></a>
+
+DEPRECATED: Please use `app-portal-access` instead.
+
+Use this function to get magic links (and authentication codes) for connecting your users to the Consumer Application Portal.
+
+#### 🛠️ Usage<a id="🛠️-usage"></a>
+
+```python
+get_magic_links_response = svix.authentication.get_magic_links(
+    app_id="unique-app-identifier",
+    idempotency_key="string_example",
+)
+```
+
+#### ⚙️ Parameters<a id="⚙️-parameters"></a>
+
+##### app_id: `str`<a id="app_id-str"></a>
+
+The app's ID or UID
+
+##### idempotency_key: `str`<a id="idempotency_key-str"></a>
+
+The request's idempotency key
+
+#### 🔄 Return<a id="🔄-return"></a>
+
+[`DashboardAccessOut`](./svix_python_sdk/pydantic/dashboard_access_out.py)
+
+#### 🌐 Endpoint<a id="🌐-endpoint"></a>
+
+`/api/v1/auth/dashboard-access/{app_id}` `post`
+
+[🔙 **Back to Table of Contents**](#table-of-contents)
+
+---
+
+### `svix.authentication.logout_token`<a id="svixauthenticationlogout_token"></a>
 
 Logout an app token.
 
@@ -689,7 +689,7 @@ Trying to log out other tokens will fail.
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-svix.authentication.revoke_token(
+svix.authentication.logout_token(
     idempotency_key="string_example",
 )
 ```
@@ -708,14 +708,14 @@ The request's idempotency key
 
 ---
 
-### `svix.background_tasks.get_task_by_id`<a id="svixbackground_tasksget_task_by_id"></a>
+### `svix.background_tasks.get_by_id`<a id="svixbackground_tasksget_by_id"></a>
 
 Get a background task by ID.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-get_task_by_id_response = svix.background_tasks.get_task_by_id(
+get_by_id_response = svix.background_tasks.get_by_id(
     task_id="task_id_example",
 )
 ```
@@ -736,14 +736,14 @@ get_task_by_id_response = svix.background_tasks.get_task_by_id(
 
 ---
 
-### `svix.background_tasks.list_recent_tasks`<a id="svixbackground_taskslist_recent_tasks"></a>
+### `svix.background_tasks.get_past_tasks`<a id="svixbackground_tasksget_past_tasks"></a>
 
 List background tasks executed in the past 90 days.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-list_recent_tasks_response = svix.background_tasks.list_recent_tasks(
+get_past_tasks_response = svix.background_tasks.get_past_tasks(
     status="running",
     task="endpoint.replay",
     limit=1,
@@ -786,7 +786,7 @@ The sorting order of the returned items
 
 ---
 
-### `svix.endpoint.create_new`<a id="svixendpointcreate_new"></a>
+### `svix.endpoint.create_or_update`<a id="svixendpointcreate_or_update"></a>
 
 Create a new endpoint for the application.
 
@@ -795,7 +795,7 @@ When `secret` is `null` the secret is automatically generated (recommended)
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-create_new_response = svix.endpoint.create_new(
+create_or_update_response = svix.endpoint.create_or_update(
     url="https://example.com/webhook/",
     app_id="unique-app-identifier",
     description="An example endpoint name",
@@ -862,14 +862,14 @@ The request's idempotency key
 
 ---
 
-### `svix.endpoint.get_endpoint`<a id="svixendpointget_endpoint"></a>
+### `svix.endpoint.get_details`<a id="svixendpointget_details"></a>
 
 Get an endpoint.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-get_endpoint_response = svix.endpoint.get_endpoint(
+get_details_response = svix.endpoint.get_details(
     app_id="unique-app-identifier",
     endpoint_id="unique-ep-identifier",
 )
@@ -932,7 +932,7 @@ The ep's ID or UID
 
 ---
 
-### `svix.endpoint.get_secret`<a id="svixendpointget_secret"></a>
+### `svix.endpoint.get_signing_secret`<a id="svixendpointget_signing_secret"></a>
 
 Get the endpoint's signing secret.
 
@@ -942,7 +942,7 @@ For more information please refer to [the consuming webhooks docs](https://docs.
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-get_secret_response = svix.endpoint.get_secret(
+get_signing_secret_response = svix.endpoint.get_signing_secret(
     app_id="unique-app-identifier",
     endpoint_id="unique-ep-identifier",
 )
@@ -970,14 +970,14 @@ The ep's ID or UID
 
 ---
 
-### `svix.endpoint.get_stats`<a id="svixendpointget_stats"></a>
+### `svix.endpoint.get_statistics`<a id="svixendpointget_statistics"></a>
 
 Get basic statistics for the endpoint.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-get_stats_response = svix.endpoint.get_stats(
+get_statistics_response = svix.endpoint.get_statistics(
     app_id="unique-app-identifier",
     endpoint_id="unique-ep-identifier",
     since="1970-01-01T00:00:00.00Z",
@@ -1288,14 +1288,14 @@ The request's idempotency key
 
 ---
 
-### `svix.endpoint.resend_failed_webhooks`<a id="svixendpointresend_failed_webhooks"></a>
+### `svix.endpoint.resend_failed_messages`<a id="svixendpointresend_failed_messages"></a>
 
 Resend all failed messages since a given time.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-resend_failed_webhooks_response = svix.endpoint.resend_failed_webhooks(
+resend_failed_messages_response = svix.endpoint.resend_failed_messages(
     since="1970-01-01T00:00:00.00Z",
     app_id="unique-app-identifier",
     endpoint_id="unique-ep-identifier",
@@ -1381,14 +1381,14 @@ The request's idempotency key
 
 ---
 
-### `svix.endpoint.send_example_message`<a id="svixendpointsend_example_message"></a>
+### `svix.endpoint.send_example_message_type`<a id="svixendpointsend_example_message_type"></a>
 
 Send an example message for event
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-send_example_message_response = svix.endpoint.send_example_message(
+send_example_message_type_response = svix.endpoint.send_example_message_type(
     event_type="user.signup",
     app_id="unique-app-identifier",
     endpoint_id="unique-ep-identifier",
@@ -1469,14 +1469,53 @@ The ep's ID or UID
 
 ---
 
-### `svix.endpoint.update_endpoint`<a id="svixendpointupdate_endpoint"></a>
+### `svix.endpoint.set_webhook_headers`<a id="svixendpointset_webhook_headers"></a>
+
+Set the additional headers to be sent with the webhook
+
+#### 🛠️ Usage<a id="🛠️-usage"></a>
+
+```python
+svix.endpoint.set_webhook_headers(
+    headers={
+        "key": "string_example",
+    },
+    app_id="unique-app-identifier",
+    endpoint_id="unique-ep-identifier",
+)
+```
+
+#### ⚙️ Parameters<a id="⚙️-parameters"></a>
+
+##### headers: [`EndpointHeadersInHeaders`](./svix_python_sdk/type/endpoint_headers_in_headers.py)<a id="headers-endpointheadersinheaderssvix_python_sdktypeendpoint_headers_in_headerspy"></a>
+
+##### app_id: `str`<a id="app_id-str"></a>
+
+The app's ID or UID
+
+##### endpoint_id: `str`<a id="endpoint_id-str"></a>
+
+The ep's ID or UID
+
+#### ⚙️ Request Body<a id="⚙️-request-body"></a>
+
+[`EndpointHeadersIn`](./svix_python_sdk/type/endpoint_headers_in.py)
+#### 🌐 Endpoint<a id="🌐-endpoint"></a>
+
+`/api/v1/app/{app_id}/endpoint/{endpoint_id}/headers` `put`
+
+[🔙 **Back to Table of Contents**](#table-of-contents)
+
+---
+
+### `svix.endpoint.update_endpoint_by_id`<a id="svixendpointupdate_endpoint_by_id"></a>
 
 Update an endpoint.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-update_endpoint_response = svix.endpoint.update_endpoint(
+update_endpoint_by_id_response = svix.endpoint.update_endpoint_by_id(
     url="https://example.com/webhook/",
     app_id="unique-app-identifier",
     endpoint_id="unique-ep-identifier",
@@ -1538,46 +1577,7 @@ Optional unique identifier for the endpoint
 
 ---
 
-### `svix.endpoint.update_headers`<a id="svixendpointupdate_headers"></a>
-
-Set the additional headers to be sent with the webhook
-
-#### 🛠️ Usage<a id="🛠️-usage"></a>
-
-```python
-svix.endpoint.update_headers(
-    headers={
-        "key": "string_example",
-    },
-    app_id="unique-app-identifier",
-    endpoint_id="unique-ep-identifier",
-)
-```
-
-#### ⚙️ Parameters<a id="⚙️-parameters"></a>
-
-##### headers: [`EndpointHeadersInHeaders`](./svix_python_sdk/type/endpoint_headers_in_headers.py)<a id="headers-endpointheadersinheaderssvix_python_sdktypeendpoint_headers_in_headerspy"></a>
-
-##### app_id: `str`<a id="app_id-str"></a>
-
-The app's ID or UID
-
-##### endpoint_id: `str`<a id="endpoint_id-str"></a>
-
-The ep's ID or UID
-
-#### ⚙️ Request Body<a id="⚙️-request-body"></a>
-
-[`EndpointHeadersIn`](./svix_python_sdk/type/endpoint_headers_in.py)
-#### 🌐 Endpoint<a id="🌐-endpoint"></a>
-
-`/api/v1/app/{app_id}/endpoint/{endpoint_id}/headers` `put`
-
-[🔙 **Back to Table of Contents**](#table-of-contents)
-
----
-
-### `svix.event_type.archive_type`<a id="svixevent_typearchive_type"></a>
+### `svix.event_type.archive`<a id="svixevent_typearchive"></a>
 
 Archive an event type.
 
@@ -1589,7 +1589,7 @@ An event type can be unarchived with the
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-svix.event_type.archive_type(
+svix.event_type.archive(
     event_type_name="user.signup",
     expunge=False,
 )
@@ -1669,14 +1669,14 @@ The request's idempotency key
 
 ---
 
-### `svix.event_type.get_by_name`<a id="svixevent_typeget_by_name"></a>
+### `svix.event_type.get_event_type`<a id="svixevent_typeget_event_type"></a>
 
 Get an event type.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-get_by_name_response = svix.event_type.get_by_name(
+get_event_type_response = svix.event_type.get_event_type(
     event_type_name="user.signup",
 )
 ```
@@ -1694,56 +1694,6 @@ The event type's name
 #### 🌐 Endpoint<a id="🌐-endpoint"></a>
 
 `/api/v1/event-type/{event_type_name}` `get`
-
-[🔙 **Back to Table of Contents**](#table-of-contents)
-
----
-
-### `svix.event_type.get_list`<a id="svixevent_typeget_list"></a>
-
-Return the list of event types.
-
-#### 🛠️ Usage<a id="🛠️-usage"></a>
-
-```python
-get_list_response = svix.event_type.get_list(
-    limit=1,
-    iterator="user.signup",
-    order="ascending",
-    include_archived=False,
-    with_content=False,
-)
-```
-
-#### ⚙️ Parameters<a id="⚙️-parameters"></a>
-
-##### limit: `int`<a id="limit-int"></a>
-
-Limit the number of returned items
-
-##### iterator: `Optional[str]`<a id="iterator-optionalstr"></a>
-
-The iterator returned from a prior invocation
-
-##### order: [`Ordering`](./svix_python_sdk/type/.py)<a id="order-orderingsvix_python_sdktypepy"></a>
-
-The sorting order of the returned items
-
-##### include_archived: `bool`<a id="include_archived-bool"></a>
-
-When `true` archived (deleted but not expunged) items are included in the response
-
-##### with_content: `bool`<a id="with_content-bool"></a>
-
-When `true` the full item (including the schema) is included in the response
-
-#### 🔄 Return<a id="🔄-return"></a>
-
-[`ListResponseEventTypeOut`](./svix_python_sdk/pydantic/list_response_event_type_out.py)
-
-#### 🌐 Endpoint<a id="🌐-endpoint"></a>
-
-`/api/v1/event-type` `get`
 
 [🔙 **Back to Table of Contents**](#table-of-contents)
 
@@ -1798,14 +1748,64 @@ Import a list of event types from webhooks defined in an OpenAPI spec.  The Open
 
 ---
 
-### `svix.event_type.partially_update_type`<a id="svixevent_typepartially_update_type"></a>
+### `svix.event_type.list`<a id="svixevent_typelist"></a>
+
+Return the list of event types.
+
+#### 🛠️ Usage<a id="🛠️-usage"></a>
+
+```python
+list_response = svix.event_type.list(
+    limit=1,
+    iterator="user.signup",
+    order="ascending",
+    include_archived=False,
+    with_content=False,
+)
+```
+
+#### ⚙️ Parameters<a id="⚙️-parameters"></a>
+
+##### limit: `int`<a id="limit-int"></a>
+
+Limit the number of returned items
+
+##### iterator: `Optional[str]`<a id="iterator-optionalstr"></a>
+
+The iterator returned from a prior invocation
+
+##### order: [`Ordering`](./svix_python_sdk/type/.py)<a id="order-orderingsvix_python_sdktypepy"></a>
+
+The sorting order of the returned items
+
+##### include_archived: `bool`<a id="include_archived-bool"></a>
+
+When `true` archived (deleted but not expunged) items are included in the response
+
+##### with_content: `bool`<a id="with_content-bool"></a>
+
+When `true` the full item (including the schema) is included in the response
+
+#### 🔄 Return<a id="🔄-return"></a>
+
+[`ListResponseEventTypeOut`](./svix_python_sdk/pydantic/list_response_event_type_out.py)
+
+#### 🌐 Endpoint<a id="🌐-endpoint"></a>
+
+`/api/v1/event-type` `get`
+
+[🔙 **Back to Table of Contents**](#table-of-contents)
+
+---
+
+### `svix.event_type.partially_update_event_type`<a id="svixevent_typepartially_update_event_type"></a>
 
 Partially update an event type.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-partially_update_type_response = svix.event_type.partially_update_type(
+partially_update_event_type_response = svix.event_type.partially_update_event_type(
     event_type_name="user.signup",
     description="string_example",
     archived=True,
@@ -1845,14 +1845,14 @@ The event type's name
 
 ---
 
-### `svix.event_type.update_type`<a id="svixevent_typeupdate_type"></a>
+### `svix.event_type.update_event_type_name`<a id="svixevent_typeupdate_event_type_name"></a>
 
 Update an event type.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-update_type_response = svix.event_type.update_type(
+update_event_type_name_response = svix.event_type.update_event_type_name(
     description="A user has signed up",
     event_type_name="user.signup",
     archived=False,
@@ -1892,14 +1892,14 @@ The event type's name
 
 ---
 
-### `svix.health.check_server_status`<a id="svixhealthcheck_server_status"></a>
+### `svix.health.check_status`<a id="svixhealthcheck_status"></a>
 
 Verify the API server is up and running.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-svix.health.check_server_status()
+svix.health.check_status()
 ```
 
 #### 🌐 Endpoint<a id="🌐-endpoint"></a>
@@ -2052,14 +2052,14 @@ The integ's ID
 
 ---
 
-### `svix.integration.list_integrations`<a id="svixintegrationlist_integrations"></a>
+### `svix.integration.list`<a id="svixintegrationlist"></a>
 
 List the application's integrations.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-list_integrations_response = svix.integration.list_integrations(
+list_response = svix.integration.list(
     app_id="unique-app-identifier",
     limit=1,
     iterator="integ_1srOrx2ZWZBpBUvZwXKQmoEYga2",
@@ -2092,14 +2092,14 @@ The iterator returned from a prior invocation
 
 ---
 
-### `svix.integration.rotate_integration_key`<a id="svixintegrationrotate_integration_key"></a>
+### `svix.integration.rotate_key`<a id="svixintegrationrotate_key"></a>
 
 Rotate the integration's key. The previous key will be immediately revoked.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-rotate_integration_key_response = svix.integration.rotate_integration_key(
+rotate_key_response = svix.integration.rotate_key(
     app_id="unique-app-identifier",
     integ_id="integ_1srOrx2ZWZBpBUvZwXKQmoEYga2",
     idempotency_key="string_example",
@@ -2132,14 +2132,14 @@ The request's idempotency key
 
 ---
 
-### `svix.integration.update_integration`<a id="svixintegrationupdate_integration"></a>
+### `svix.integration.update_integration_by_id`<a id="svixintegrationupdate_integration_by_id"></a>
 
 Update an integration.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-update_integration_response = svix.integration.update_integration(
+update_integration_by_id_response = svix.integration.update_integration_by_id(
     name="Example Integration",
     app_id="unique-app-identifier",
     integ_id="integ_1srOrx2ZWZBpBUvZwXKQmoEYga2",
@@ -2173,7 +2173,7 @@ The integ's ID
 
 ---
 
-### `svix.message.create_new`<a id="svixmessagecreate_new"></a>
+### `svix.message.create_new_msg`<a id="svixmessagecreate_new_msg"></a>
 
 Creates a new message and dispatches it to all of the application's endpoints.
 
@@ -2188,7 +2188,7 @@ The `payload` property is the webhook's body (the actual webhook message). Svix 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-create_new_response = svix.message.create_new(
+create_new_msg_response = svix.message.create_new_msg(
     event_type="user.signup",
     payload={
         "email": "test@example.com",
@@ -2450,14 +2450,14 @@ The attempt's ID
 
 ---
 
-### `svix.message_attempt.get_by_destination`<a id="svixmessage_attemptget_by_destination"></a>
+### `svix.message_attempt.get_by_attempt`<a id="svixmessage_attemptget_by_attempt"></a>
 
 `msg_id`: Use a message id or a message `eventId`
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-get_by_destination_response = svix.message_attempt.get_by_destination(
+get_by_attempt_response = svix.message_attempt.get_by_attempt(
     app_id="unique-app-identifier",
     msg_id="unique-msg-identifier",
     attempt_id="atmpt_1srOrx2ZWZBpBUvZwXKQmoEYga2",
@@ -2812,7 +2812,7 @@ Filter response based on the event type
 
 ---
 
-### `svix.message_attempt.list_by_msg_attempted_destinations`<a id="svixmessage_attemptlist_by_msg_attempted_destinations"></a>
+### `svix.message_attempt.list_by_msg`<a id="svixmessage_attemptlist_by_msg"></a>
 
 List attempts by message id
 
@@ -2825,22 +2825,20 @@ set the `before` or `after` parameter as appropriate.
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-list_by_msg_attempted_destinations_response = (
-    svix.message_attempt.list_by_msg_attempted_destinations(
-        app_id="unique-app-identifier",
-        msg_id="unique-msg-identifier",
-        limit=1,
-        iterator="atmpt_1srOrx2ZWZBpBUvZwXKQmoEYga2",
-        status=0,
-        status_code_class=0,
-        channel="project_1337",
-        tag="project_1337",
-        endpoint_id="unique-ep-identifier",
-        before="1970-01-01T00:00:00.00Z",
-        after="1970-01-01T00:00:00.00Z",
-        with_content=True,
-        event_types=["2"],
-    )
+list_by_msg_response = svix.message_attempt.list_by_msg(
+    app_id="unique-app-identifier",
+    msg_id="unique-msg-identifier",
+    limit=1,
+    iterator="atmpt_1srOrx2ZWZBpBUvZwXKQmoEYga2",
+    status=0,
+    status_code_class=0,
+    channel="project_1337",
+    tag="project_1337",
+    endpoint_id="unique-ep-identifier",
+    before="1970-01-01T00:00:00.00Z",
+    after="1970-01-01T00:00:00.00Z",
+    with_content=True,
+    event_types=["2"],
 )
 ```
 
@@ -2910,7 +2908,7 @@ Filter response based on the event type
 
 ---
 
-### `svix.message_attempt.list_by_msg_attempted_destinations_0`<a id="svixmessage_attemptlist_by_msg_attempted_destinations_0"></a>
+### `svix.message_attempt.list_by_msg_attempt`<a id="svixmessage_attemptlist_by_msg_attempt"></a>
 
 Deprecated: Please use "List Attempts by Endpoint" and "List Attempts by Msg" instead.
 
@@ -2924,21 +2922,19 @@ set the `before` or `after` parameter as appropriate.
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-list_by_msg_attempted_destinations_0_response = (
-    svix.message_attempt.list_by_msg_attempted_destinations_0(
-        app_id="unique-app-identifier",
-        msg_id="unique-msg-identifier",
-        limit=1,
-        iterator="atmpt_1srOrx2ZWZBpBUvZwXKQmoEYga2",
-        endpoint_id="unique-ep-identifier",
-        channel="project_1337",
-        tag="project_1337",
-        status=0,
-        before="1970-01-01T00:00:00.00Z",
-        after="1970-01-01T00:00:00.00Z",
-        status_code_class=0,
-        event_types=["2"],
-    )
+list_by_msg_attempt_response = svix.message_attempt.list_by_msg_attempt(
+    app_id="unique-app-identifier",
+    msg_id="unique-msg-identifier",
+    limit=1,
+    iterator="atmpt_1srOrx2ZWZBpBUvZwXKQmoEYga2",
+    endpoint_id="unique-ep-identifier",
+    channel="project_1337",
+    tag="project_1337",
+    status=0,
+    before="1970-01-01T00:00:00.00Z",
+    after="1970-01-01T00:00:00.00Z",
+    status_code_class=0,
+    event_types=["2"],
 )
 ```
 
@@ -3004,14 +3000,14 @@ Filter response based on the event type
 
 ---
 
-### `svix.message_attempt.resend_message_to_endpoint`<a id="svixmessage_attemptresend_message_to_endpoint"></a>
+### `svix.message_attempt.resend_webhook`<a id="svixmessage_attemptresend_webhook"></a>
 
 Resend a message to the specified endpoint.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-svix.message_attempt.resend_message_to_endpoint(
+svix.message_attempt.resend_webhook(
     app_id="unique-app-identifier",
     msg_id="unique-msg-identifier",
     endpoint_id="unique-ep-identifier",
@@ -3045,7 +3041,7 @@ The request's idempotency key
 
 ---
 
-### `svix.statistics.calculate_event_types_for_all_apps`<a id="svixstatisticscalculate_event_types_for_all_apps"></a>
+### `svix.statistics.calculate_event_types_for_apps`<a id="svixstatisticscalculate_event_types_for_apps"></a>
 
 Creates a background task to calculate the listed event types for all apps in the organization.
 
@@ -3055,8 +3051,8 @@ retrieve the results of the operation.
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-calculate_event_types_for_all_apps_response = (
-    svix.statistics.calculate_event_types_for_all_apps()
+calculate_event_types_for_apps_response = (
+    svix.statistics.calculate_event_types_for_apps()
 )
 ```
 
@@ -3072,7 +3068,7 @@ calculate_event_types_for_all_apps_response = (
 
 ---
 
-### `svix.statistics.calculate_message_destinations`<a id="svixstatisticscalculate_message_destinations"></a>
+### `svix.statistics.calculate_message_destinations_for_apps`<a id="svixstatisticscalculate_message_destinations_for_apps"></a>
 
 Creates a background task to calculate the message destinations for all applications in the environment.
 
@@ -3082,8 +3078,8 @@ retrieve the results of the operation.
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```python
-calculate_message_destinations_response = (
-    svix.statistics.calculate_message_destinations(
+calculate_message_destinations_for_apps_response = (
+    svix.statistics.calculate_message_destinations_for_apps(
         since="1970-01-01T00:00:00.00Z",
         until="1970-01-01T00:00:00.00Z",
         app_ids=["2"],

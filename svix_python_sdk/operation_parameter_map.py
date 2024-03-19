@@ -99,16 +99,6 @@ operation_parameter_map = {
             },
         ]
     },
-    '/api/v1/auth/dashboard-access/{app_id}-POST': {
-        'parameters': [
-            {
-                'name': 'app_id'
-            },
-            {
-                'name': 'idempotency-key'
-            },
-        ]
-    },
     '/api/v1/auth/app-portal-access/{app_id}-POST': {
         'parameters': [
             {
@@ -119,6 +109,16 @@ operation_parameter_map = {
             },
             {
                 'name': 'expiry'
+            },
+            {
+                'name': 'idempotency-key'
+            },
+        ]
+    },
+    '/api/v1/auth/dashboard-access/{app_id}-POST': {
+        'parameters': [
+            {
+                'name': 'app_id'
             },
             {
                 'name': 'idempotency-key'
@@ -419,6 +419,19 @@ operation_parameter_map = {
             },
         ]
     },
+    '/api/v1/app/{app_id}/endpoint/{endpoint_id}/headers-PUT': {
+        'parameters': [
+            {
+                'name': 'headers'
+            },
+            {
+                'name': 'app_id'
+            },
+            {
+                'name': 'endpoint_id'
+            },
+        ]
+    },
     '/api/v1/app/{app_id}/endpoint/{endpoint_id}-PUT': {
         'parameters': [
             {
@@ -453,19 +466,6 @@ operation_parameter_map = {
             },
             {
                 'name': 'metadata'
-            },
-        ]
-    },
-    '/api/v1/app/{app_id}/endpoint/{endpoint_id}/headers-PUT': {
-        'parameters': [
-            {
-                'name': 'headers'
-            },
-            {
-                'name': 'app_id'
-            },
-            {
-                'name': 'endpoint_id'
             },
         ]
     },
@@ -508,6 +508,19 @@ operation_parameter_map = {
             },
         ]
     },
+    '/api/v1/event-type/import/openapi-POST': {
+        'parameters': [
+            {
+                'name': 'spec'
+            },
+            {
+                'name': 'specRaw'
+            },
+            {
+                'name': 'idempotency-key'
+            },
+        ]
+    },
     '/api/v1/event-type-GET': {
         'parameters': [
             {
@@ -524,19 +537,6 @@ operation_parameter_map = {
             },
             {
                 'name': 'with_content'
-            },
-        ]
-    },
-    '/api/v1/event-type/import/openapi-POST': {
-        'parameters': [
-            {
-                'name': 'spec'
-            },
-            {
-                'name': 'specRaw'
-            },
-            {
-                'name': 'idempotency-key'
             },
         ]
     },

@@ -30,7 +30,6 @@ from svix_python_sdk.model.background_task_status import BackgroundTaskStatus
 from svix_python_sdk.model.background_task_type import BackgroundTaskType
 from svix_python_sdk.model.border_radius_config import BorderRadiusConfig
 from svix_python_sdk.model.border_radius_enum import BorderRadiusEnum
-from svix_python_sdk.model.color import Color
 from svix_python_sdk.model.completion_choice import CompletionChoice
 from svix_python_sdk.model.completion_message import CompletionMessage
 from svix_python_sdk.model.custom_color_palette import CustomColorPalette
